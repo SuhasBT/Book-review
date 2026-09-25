@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Reviews</title>
+</head>
+<body>
+    <h1>Book Reviews</h1>
+    <a href="{{ url_for('add_review') }}">Add a Review</a>
+    <ul>
+        {% for review in reviews %}
+            <li><strong>{{ review.title }}</strong>: {{ review.text }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
