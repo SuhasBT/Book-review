@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: book-review-app
-          image: suhasbt/book-review-app:{{ .Values.image.tag }}
+          image: suhasbt/book-review-app:{{  .Values.image.tag  }}
           ports:
             - containerPort: 5000
