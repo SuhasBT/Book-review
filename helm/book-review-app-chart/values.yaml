@@ -4,7 +4,7 @@ image:
   repository: suhasbt/book-review-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "36244604242"
+  tag: "a503b4622355164a159c15c7d3b1211b34dd96f9"
 
 ingress:
   enabled: false
