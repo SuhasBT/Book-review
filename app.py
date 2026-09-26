@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-# In-memory storage (you can replace with SQLite later)
+# In-memory storage (you can replace with SQLite later)//
 reviews = []
 
 @app.route('/')
