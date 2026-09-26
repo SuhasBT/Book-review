@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-# In-memory storage (you can replace with SQLite later)//
+# In-memory storage (you can replace with SQLite later)
 reviews = []
 
 
@@ -27,4 +27,4 @@ def get_reviews():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
