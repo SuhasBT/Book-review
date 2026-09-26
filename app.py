@@ -2,12 +2,14 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-# In-memory storage (you can replace with SQLite later)//
+# In-memory storage (you can replace with SQLite later)
 reviews = []
+
 
 @app.route('/')
 def index():
     return render_template('index.html', reviews=reviews)
+
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_review():
@@ -18,9 +20,11 @@ def add_review():
         return redirect(url_for('index'))
     return render_template('add_review.html')
 
+
 @app.route('/reviews')
 def get_reviews():
     return {"reviews": reviews}
 
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(debug=True)
